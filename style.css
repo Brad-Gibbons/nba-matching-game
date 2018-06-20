@@ -1,0 +1,115 @@
+
+*,
+*::before::before,
+*::after::after  {
+     box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+}
+header {
+    text-align: center;
+}
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 5px solid black;
+  padding: 5px;
+  background-image: url("Images/bg-court.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#start {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #34495e;
+  border: 0;
+  border-bottom: 2px solid #263849;
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  box-shadow: inset 0 -2px #263849;
+}
+#finish {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #34495e;
+  border: 0;
+  border-bottom: 2px solid #263849;
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  box-shadow: inset 0 -2px #263849;
+  visibility: hidden;
+}
+.card {
+  margin: 5px;
+  padding: px;
+  background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.selected {
+    background-color: darkgray;
+    border: 3px solid black;
+}
+.match {
+    background-image: none !important;
+    border: 3px solid black;
+}
+.card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+  }
+  
+  .card,
+  .back,
+  .front {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .back,
+  .front {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 25px;
+
+  }
+  .front {
+    background: url('Images/nba-logo-vector-01.png') no-repeat center center / contain;
+  }
+  .back {
+    transform: rotateY(180deg);
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 25px;
+  }
+  .selected {
+    transform: rotateY(180deg);
+  }
+  
+  .match .front {
+    background: white !important;
+  }
+  .highscores {
+    text-align: center;
+  }
